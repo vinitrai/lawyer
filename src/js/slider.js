@@ -36,6 +36,14 @@ const nextSlide = () => {
     showSlide();
 };
 
+//Function to go to the previous slide
+const previousSlide =()=>{
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = slides.length - 1;
+    }
+    showSlide();
+}
 // Start the automatic slide transition
 const startSlideShow = () => {
     intervalId = setInterval(nextSlide, 5000); // Transition every 5 seconds (adjust as needed)
@@ -54,11 +62,7 @@ nextBtn.addEventListener('click', () => {
 
 // Event listener for previous button
 prevBtn.addEventListener('click', () => {
-    currentIndex--;
-    if (currentIndex < 0) {
-        currentIndex = slides.length - 1;
-    }
-    showSlide();
+    previousSlide();
     stopSlideShow(); // Stop automatic slide transition on manual interaction
 });
 
