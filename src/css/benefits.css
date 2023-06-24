@@ -1,0 +1,93 @@
+
+.card {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 11px;
+    border: 2px solid var(--secondary-color);
+  }
+  
+  
+  
+  .card>div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+  .content {
+    background-color: var(--primary-color);
+  }
+  .overlay {
+    top: 98%;
+    background-color: var(--secondary-color);
+    transition: 3s;
+  }
+  .card:hover {
+    cursor: pointer;
+  }
+  .card:hover .overlay {
+    top: 0;
+  }
+  .content span {
+
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent-color);
+    /* border-radius: 50%; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   border-radius: 26% 74% 70% 30% / 30% 30% 70% 70%;
+   animation: borderAnimate 3s infinite; 
+  }
+  .content span::before{
+    display:'block';
+    content:'';
+    width:120%;
+    height:120%;
+    position: absolute;
+    top:-10%;
+    left:-10%;
+    background-color:var(--secondary-color);
+    z-index:0;
+    border-radius: 6px;
+    opacity:0.2;
+  }
+  @keyframes borderAnimate {
+    0%{
+      border-radius: 26% 74% 70% 30% / 30% 30% 70% 70%;
+
+    }
+    50%{
+     border-radius: 90% 10% 46% 54% / 30% 52% 48% 70% ;
+    }
+    100%{
+      border-radius: 26% 74% 70% 30% / 30% 30% 70% 70%;
+
+    }
+  }
+  .content i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+  }
+  
+  @media screen and (min-width:640px){
+      /* benefits style */
+  .benefits__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  }
+  @media screen and (min-width:992px){
+    .benefits__container {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    
+  }

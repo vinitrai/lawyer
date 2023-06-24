@@ -1,0 +1,45 @@
+/* Faq section */
+.faq {
+    background-color: var(--primary-color);
+  }
+  
+  .faq__box {
+    width: 100%;
+    margin-inline: auto;
+  }
+  
+  .faq__box>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+  
+  
+  .plus {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+  }
+  
+  .faq__answer {
+    display: none;
+  }
+  
+  .show__faq {
+    display: block;
+  }
+  
+  @media screen and (min-width:640px){
+    
+  .faq__box {
+    width: 80%;
+
+    margin-inline: auto;
+
+  }
+
+  .faq__box>div {
+    flex-direction: row;
+  }
+  }

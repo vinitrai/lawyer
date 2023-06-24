@@ -1,0 +1,32 @@
+.service{
+    background-image: url('../../assets/images/services/service__pic.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    margin-top: 60px;
+}
+.area{
+    background-color: var(--primary-color);
+}
+.service__area{
+    padding:0.5em 0;
+}
+.service__area img{
+    border:2px solid var(--accent-color);
+    object-fit: cover;
+    border-radius: 9px ;
+}
+@media screen and (min-width:640px){
+    .area__container{
+        gap:2em;
+    }
+    .service__area{
+        grid-template-columns: repeat(2,1fr);
+        padding: 2em 0;
+        align-items: center;
+    }
+    
+    .service__area:nth-of-type(even) .service__image{
+        order:-1;
+    }
+}
