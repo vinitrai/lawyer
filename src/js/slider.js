@@ -68,7 +68,7 @@ prevBtn.addEventListener('click', () => {
 
 // Initialize the carousel
 resetSlides();
-showSlide();
+//showSlide();
 startSlideShow(); // Start the automatic slide transition
 }
 
