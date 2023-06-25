@@ -5,7 +5,8 @@
     position: relative;
     overflow: hidden;
     border-radius: 11px;
-    border: 2px solid var(--secondary-color);
+    /* border: 2px solid var(--secondary-color); */
+    box-shadow: 1px 1px 0px 0px var(--accent-color);
   }
   
   
@@ -25,7 +26,7 @@
     background-color: var(--primary-color);
   }
   .overlay {
-    top: 98%;
+    top: -98%;
     background-color: var(--secondary-color);
     transition: 3s;
   }
@@ -33,7 +34,7 @@
     cursor: pointer;
   }
   .card:hover .overlay {
-    top: 0;
+    top:0%;
   }
   .content span {
 
