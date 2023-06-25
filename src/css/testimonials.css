@@ -1,10 +1,12 @@
 /* Testimonials */
 .testimonial{
-    background-color: var(--secondary-color);
+
     padding-block: 2em;
   }
   .testimonial__container{
     position: relative;
+    background-color: var(--secondary-color);
+
   }
   .slides{
     width:100%;
